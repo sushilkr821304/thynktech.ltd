@@ -11,8 +11,8 @@ const HeroSection = () => {
         min-h-[100svh]
         flex
         items-center
-        pt-24
-        pb-16
+        pt-16
+        pb-12
         bg-cover
         bg-center
         overflow-hidden
@@ -30,10 +30,10 @@ const HeroSection = () => {
                 <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-6">
 
                     {/* LEFT TEXT */}
-                    <div className="w-full lg:w-[52%]">
+                    <div className="w-full lg:w-[52%] lg:-mt-12">
 
                         {/* Badge */}
-                        <div className="mb-5">
+                        <div className="mb-3">
                             <span className="inline-flex items-center bg-white/20 backdrop-blur-md text-white px-5 py-2 rounded-full font-semibold text-sm border border-white/20">
                                 <i className="fas fa-star mr-2 text-yellow-300"></i>
                                 Award-Winning Solutions
@@ -48,21 +48,21 @@ const HeroSection = () => {
               lg:text-[64px]
               font-extrabold
               text-white
-              leading-tight
-              mb-5
+              leading-[1.1]
+              mb-3
             ">
                             Transforming Ideas Into <br />
                             <span className="text-yellow-400">Digital Excellence</span>
                         </h1>
 
                         {/* Subtitle (slightly bigger) */}
-                        <p className="text-[18px] md:text-lg text-blue-100 max-w-xl mb-8">
+                        <p className="text-[18px] md:text-lg text-blue-100 max-w-xl mb-6">
                             Building innovative software solutions that empower businesses
                             to thrive in the digital era
                         </p>
 
                         {/* Stats */}
-                        <div className="flex flex-wrap gap-8 lg:gap-12 mb-8">
+                        <div className="flex flex-wrap gap-8 lg:gap-12 mb-6">
                             <div className="flex items-center gap-3">
                                 <i className="fas fa-users text-3xl text-white"></i>
                                 <div>

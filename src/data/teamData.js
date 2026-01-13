@@ -9,10 +9,11 @@ export const teamData = {
 
     backend: [
         { id: "be-1", name: "Rajeshwari Shinde", designation: "BACKEND DEVELOPER", image: "25.png" },
-        { id: "be-2", name: "Hitesh Bhosale", designation: "BACKEND DEVELOPER", image: "26.png" },
+        { id: "be-2", name: "Ajinkya Sangle", designation: "BACKEND DEVELOPER", image: "26.png" },
         { id: "be-3", name: "Rushikesh Mind", designation: "BACKEND DEVELOPER", image: "39.jpeg" },
-        { id: "be-4", name: "Sneha Patel", designation: "Python Backend Lead", image: "9.png" },
-        { id: "be-5", name: "Lalit", designation: "Java Backend Lead", image: "lalit.jpeg" }
+        { id: "be-4", name: "Bhumika Kshirsagar", designation: "BACKEND DEVELOPER", image: "40.jpeg" },
+        { id: "be-5", name: "Lalit Katkam", designation: "BACKEND DEVELOPER", image: "lalit.jpeg" }
+
     ],
 
     fullstack: [
