@@ -1,0 +1,80 @@
+export const jobListings = [
+    {
+        id: 'TT-IND-2026-001',
+        title: 'Senior Full Stack Developer',
+        city: 'Pune',
+        state: 'Maharashtra',
+        country: 'India',
+        type: 'Experienced',
+        department: 'Engineering',
+        description: 'We are looking for a Senior Full Stack Developer to lead our core product team. You will be responsible for architecting scalable solutions.',
+        postedDate: '2026-01-05',
+        skills: ['React', 'Node.js', 'AWS'],
+        category: 'Software Development'
+    },
+    {
+        id: 'TT-IND-2026-002',
+        title: 'Graduate Trainee Engineer',
+        city: 'Noida',
+        state: 'Uttar Pradesh',
+        country: 'India',
+        type: 'Fresher',
+        department: 'Engineering',
+        description: 'Join our extensive training program designed for fresh graduates. Learn from the best minds in the industry.',
+        postedDate: '2026-01-08',
+        skills: ['Java', 'Python', 'Basic SQL'],
+        category: 'Early Careers'
+    },
+    {
+        id: 'TT-IND-2026-003',
+        title: 'UI/UX Designer',
+        city: 'Bangalore',
+        state: 'Karnataka',
+        country: 'India',
+        type: 'Experienced',
+        department: 'Design',
+        description: 'Create intuitive and beautiful user interfaces for our enterprise clients.',
+        postedDate: '2026-01-02',
+        skills: ['Figma', 'Adobe XD', 'Prototyping'],
+        category: 'Design'
+    },
+    {
+        id: 'TT-IND-2026-004',
+        title: 'DevOps Engineer',
+        city: 'Pune',
+        state: 'Maharashtra',
+        country: 'India',
+        type: 'Experienced',
+        department: 'Operations',
+        description: 'Manage our cloud infrastructure and CI/CD pipelines to ensure 99.99% uptime.',
+        postedDate: '2026-01-06',
+        skills: ['Docker', 'Kubernetes', 'Jenkins'],
+        category: 'It Operations'
+    },
+    {
+        id: 'TT-IND-2026-005',
+        title: 'Business Analyst',
+        city: 'Mumbai',
+        state: 'Maharashtra',
+        country: 'India',
+        type: 'Experienced',
+        department: 'Product',
+        description: 'Bridge the gap between business requirements and technical implementation.',
+        postedDate: '2026-01-07',
+        skills: ['Documentation', 'Agile', 'JIRA'],
+        category: 'Product Management'
+    },
+    {
+        id: 'TT-IND-2026-006',
+        title: 'Marketing Intern',
+        city: 'Remote',
+        state: '',
+        country: 'India',
+        type: 'Fresher',
+        department: 'Marketing',
+        description: 'Assist our marketing team in social media campaigns and content creation.',
+        postedDate: '2026-01-09',
+        skills: ['Social Media', 'Content Writing', 'Canva'],
+        category: 'Marketing'
+    }
+];
