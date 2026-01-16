@@ -108,15 +108,15 @@ const Navbar = () => {
                 <Link
                     to={linkTo}
                     className={`nav-link flex items-center gap-1.5 py-7 text-[15px] font-bold transition-all duration-300 relative tracking-wide cursor-pointer
-                        ${isOpen ? 'text-secondary' : 'text-primary'}`}
+                        ${isOpen ? 'text-[#3498DB]' : 'text-white'}`}
                     onClick={() => {
                         setActiveDropdown(null);
                         if (linkTo === '/') window.scrollTo(0, 0);
                     }}
                 >
                     {label}
-                    {hasDropdown && <ChevronDown size={14} className={`transition-transform duration-300 ${isOpen ? 'rotate-180 text-secondary' : 'text-gray-400'}`} />}
-                    <span className={`absolute bottom-6 left-0 h-0.5 bg-secondary transition-all duration-300 ${isOpen || isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                    {hasDropdown && <ChevronDown size={14} className={`transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#3498DB]' : 'text-blue-200'}`} />}
+                    <span className={`absolute bottom-6 left-0 h-0.5 bg-[#3498DB] transition-all duration-300 ${isOpen || isActive ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                 </Link>
 
                 {/* Dropdown Menu Container */}
@@ -210,12 +210,12 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolled ? 'bg-white shadow-sm py-0' : 'bg-white py-0'}`}>
+        <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolled ? 'bg-[#0A2540] shadow-xl py-0' : 'bg-[#0A2540] py-0'}`}>
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
                     <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center min-w-max transition-transform hover:scale-105">
-                        <img src="/images/logo1.png" alt="ThynkTech Logo" className="h-10 lg:h-12 w-auto" />
+                        <img src="/images/logo1.png" alt="ThynkTech Logo" className="h-10 lg:h-12 w-auto brightness-0 invert" />
                     </Link>
 
                     {/* Desktop/Tablet Menu */}
@@ -315,7 +315,7 @@ const Navbar = () => {
 
                     {/* Right CTA */}
                     <div className="flex items-center gap-6 min-w-max">
-                        <Link to="/contact" className="hidden md:flex px-7 py-2.5 bg-secondary hover:bg-primary text-white font-bold rounded-full transition-all text-[14px] shadow-sm hover:shadow-md cursor-pointer">
+                        <Link to="/contact" className="hidden md:flex px-8 py-3 bg-gradient-to-r from-[#2563EB] to-[#1E40AF] hover:shadow-[0_0_20px_rgba(37,99,235,0.5)] text-white font-bold rounded-full transition-all text-[14px] shadow-lg cursor-pointer hover:-translate-y-0.5">
                             Connect With Us
                         </Link>
                         <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl text-primary bg-gray-50 hover:bg-gray-100 transition-all cursor-pointer">

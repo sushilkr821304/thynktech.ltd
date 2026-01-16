@@ -36,17 +36,17 @@ const AboutPage = () => {
                 targetId = location.hash.replace('#', '');
             }
             // Map legacy/user-requested IDs to actual component IDs
-            if (targetId === 'engineering-team') targetId = 'engineers';
+            if (targetId === 'engineering-team' || targetId === 'engineers') targetId = 'engineering-teams';
 
             if (targetId) {
                 const el = document.getElementById(targetId);
                 if (el) {
-                    el.scrollIntoView({ behavior: 'smooth' });
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 } else {
                     // Retry once for dynamic content
                     setTimeout(() => {
                         const elRetry = document.getElementById(targetId);
-                        if (elRetry) elRetry.scrollIntoView({ behavior: 'smooth' });
+                        if (elRetry) elRetry.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }, 100);
                 }
             } else {
@@ -72,7 +72,7 @@ const AboutPage = () => {
                 <div id="team">
                     <TeamSection />
                 </div>
-                <div id="engineers">
+                <div id="engineering-teams">
                     <EngineersSection />
                 </div>
                 <div id="sales">
