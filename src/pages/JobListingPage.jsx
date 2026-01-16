@@ -188,7 +188,7 @@ const JobListingPage = () => {
 
                                     <div className="flex-shrink-0 mt-4 md:mt-0 self-start md:self-center">
                                         <a
-                                            href="https://recruiter.ltd"
+                                            href="https://thynktech.recruitment.ltd"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="inline-flex items-center justify-center bg-[#3498DB] hover:bg-[#2980b9] text-white font-semibold py-2.5 px-6 rounded-md transition-colors shadow-sm whitespace-nowrap"

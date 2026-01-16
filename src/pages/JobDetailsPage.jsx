@@ -19,7 +19,7 @@ const JobDetailsPage = () => {
     }, [id]);
 
     const handleApply = () => {
-        navigate(`/careers/apply/${id}`);
+        window.location.href = "https://thynktech.recruitment.ltd";
     };
 
     if (!job) return (

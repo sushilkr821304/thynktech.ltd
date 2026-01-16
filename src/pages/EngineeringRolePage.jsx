@@ -198,14 +198,17 @@ const EngineeringRolePage = () => {
                                         key={`${member.id}-${idx}`}
                                         className="w-52 flex-shrink-0 bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#E6EAF0] transition-all duration-300 hover:shadow-[0_15px_35px_rgba(10,37,64,0.08)]"
                                     >
-                                        <div className="aspect-[4/5] overflow-hidden relative bg-gray-50 flex items-center justify-center p-2">
+                                        <div className="h-[260px] w-full overflow-hidden relative bg-[#BFC6D2] flex items-center justify-center p-0">
                                             <img
-                                                src={`/images/team/${dataKey}/${member.image}`}
+                                                src={member.image}
                                                 alt={member.name}
+                                                loading="lazy"
+                                                decoding="async"
                                                 onError={(e) => {
                                                     e.target.src = "/images/team/default.png";
                                                 }}
-                                                className="w-full h-full object-cover rounded-lg"
+                                                className="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105"
+                                                style={{ mixBlendMode: 'multiply', opacity: '1' }}
                                             />
                                         </div>
                                         <div className="p-4 text-center">
@@ -225,7 +228,7 @@ const EngineeringRolePage = () => {
             </section>
 
             {/* 4. ENTERPRISE DELIVERY */}
-            <section className="py-24 bg-[#0A2540] relative overflow-hidden">
+            < section className="py-24 bg-[#0A2540] relative overflow-hidden" >
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 transform translate-x-32"></div>
                 <div className="absolute bottom-0 left-0 w-1/3 h-full bg-blue-900/10 -skew-x-12 transform -translate-x-20"></div>
 
@@ -250,10 +253,10 @@ const EngineeringRolePage = () => {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section >
 
             <Footer />
-        </div>
+        </div >
     );
 };
 

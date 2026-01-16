@@ -1,60 +1,56 @@
 export const teamData = {
     frontend: [
-        { id: "fe-1", name: "Sushil Kumar", designation: "Senior Frontend Engineer", image: "87.png" },
-        { id: "fe-2", name: "Hitesh Prajapati", designation: "React & UI Specialist", image: "Hitesh.png" },
-        { id: "fe-3", name: "Priya Sharma", designation: "Frontend Architect", image: "35.png" },
-        { id: "fe-4", name: "Rohan Gupta", designation: "UI Engineer", image: "36.png" },
-        { id: "fe-5", name: "Lalit Gupta", designation: "UI Engineer", image: "36.png" }
+        { id: "fe-1", name: "Hitesh Prajapati", designation: "Frontend Developer", image: "/images/team/frontend/Hitesh.png" },
+        { id: "fe-2", name: "Aditi Nikam", designation: "Frontend Developer", image: "/images/23.png" },
+        { id: "fe-3", name: "Sushil Kumar", designation: "Frontend Developer", image: "/images/team/frontend/87.png" },
+        { id: "fe-4", name: "Abhishek Sahu", designation: "Frontend Developer", image: "/images/team/devops/12.png" },
+        { id: "fe-5", name: "Kalyani Patil", designation: "Frontend Developer", image: "/images/team/uiux/31.png" }
     ],
 
     backend: [
-        { id: "be-1", name: "Rajeshwari Shinde", designation: "BACKEND DEVELOPER", image: "25.png" },
-        { id: "be-2", name: "Ajinkya Sangle", designation: "BACKEND DEVELOPER", image: "26.png" },
-        { id: "be-3", name: "Rushikesh Mind", designation: "BACKEND DEVELOPER", image: "39.jpeg" },
-        { id: "be-4", name: "Bhumika Kshirsagar", designation: "BACKEND DEVELOPER", image: "40.jpeg" },
-        { id: "be-5", name: "Lalit Katkam", designation: "BACKEND DEVELOPER", image: "lalit.jpeg" }
-
+        { id: "be-1", name: "Rajeshwari Shinde", designation: "BACKEND DEVELOPER", image: "/images/team/backend/25.png" },
+        { id: "be-2", name: "Ajinkya Sangle", designation: "BACKEND DEVELOPER", image: "/images/team/backend/26.png" },
+        { id: "be-3", name: "Rushikesh Mind", designation: "BACKEND DEVELOPER", image: "/images/39.jpeg" },
+        { id: "be-4", name: "Bhumika Kshirsagar", designation: "BACKEND DEVELOPER", image: "/images/40.jpeg" },
+        { id: "be-5", name: "Lalit Katkam", designation: "BACKEND DEVELOPER", image: "/images/backend/lalit.png" },
+        { id: "be-6", name: "Karan Bhosale", designation: "BACKEND DEVELOPER", image: "/images/team/backend/Karan.png" },
     ],
 
     fullstack: [
-        { id: "fs-1", name: "Sujal Suryawanshi", designation: "Full Stack Developer", image: "Sujal.png" },
-        { id: "fs-2", name: "Meera Nair", designation: "Senior MERN Stack Developer", image: "27.png" },
-        { id: "fs-3", name: "Kabir Das", designation: "Full Stack Developer", image: "29.png" },
-        { id: "fs-4", name: "Ananya Roy", designation: "JavaScript Specialist", image: "mohit.png" }
+        { id: "fs-1", name: "Anuj Pawar", designation: "FULL STACK DEVELOPER", image: "/images/team/devops/11.png" },
+        { id: "fs-2", name: "Aishwarya Deshkar", designation: "FULL STACK DEVELOPER", image: "/images/team/fullstack/29.png" },
+        { id: "fs-3", name: "Sujal Suryawanshi", designation: "FULL STACK DEVELOPER", image: "/images/team/fullstack/Sujal.png" },
+        { id: "fs-4", name: "Mohit Wagh", designation: "FULL STACK DEVELOPER", image: "/images/team/fullstack/mohit.png" },
+        { id: "fs-5", name: "Harshvardhan Salunkhe", designation: "FULL STACK DEVELOPER", image: "/images/team/fullstack/17.png" },
+        { id: "fs-6", name: "Vaibhavi Deshmukh", designation: "FULL STACK DEVELOPER", image: "/images/team/fullstack/27.png" },
+        { id: "fs-7", name: "Ayush Suryavanshi", designation: "FULL STACK DEVELOPER", image: "/images/30.PNG" },
+        { id: "fs-8", name: "Ameya Khire", designation: "FULL STACK DEVELOPER", image: "/images/team/frontend/36.png" },
+        { id: "fs-9", name: "Omkar Lanke", designation: "FULL STACK DEVELOPER", image: "/images/team/frontend/35.png" },
     ],
 
     mobile: [
-        { id: "m-1", name: "Rajesh Koothrappali", designation: "Lead Mobile Engineer", image: "16.png" },
-        { id: "m-2", name: "Penny Hofstadter", designation: "Senior iOS Developer", image: "17.png" },
-        { id: "m-3", name: "Howard Wolowitz", designation: "Android Specialist", image: "18.png" },
-        { id: "m-4", name: "Simran Kaur", designation: "Flutter Developer", image: "20.png" }
+        { id: "m-1", name: "Abrar Kivande", designation: "Lead Mobile Engineer", image: "/images/team/backend/9.png" }
     ],
 
     devops: [
-        { id: "d-1", name: "David Ross", designation: "Cloud Architect", image: "11.png" },
-        { id: "d-2", name: "Sarah Connors", designation: "Senior DevOps Engineer", image: "12.png" },
-        { id: "d-3", name: "Kyle Reese", designation: "SRE", image: "13.png" },
-        { id: "d-4", name: "John Connor", designation: "DevSecOps Specialist", image: "14.png" }
+        { id: "d-1", name: "Rushikesh Shinde", designation: "DEVOPS SPECIALIST", image: "/images/Rushi.png" },
+        { id: "d-2", name: "Tushar Gadgade", designation: "DEVOPS SPECIALIST", image: "/images/6.png" },
     ],
 
     qa: [
-        { id: "q-1", name: "Monica Geller", designation: "QA Lead", image: "15.png" },
-        { id: "q-2", name: "Chandler Bing", designation: "Automation Engineer", image: "16.png" },
-        { id: "q-3", name: "Rachel Green", designation: "Testing Specialist", image: "17.png" },
-        { id: "q-4", name: "Joey Tribbiani", designation: "Performance Tester", image: "18.png" }
+        { id: "q-1", name: "Gauri Dhone", designation: "AUTOMATION MANUAL TESTER", image: "/images/10.png" },
     ],
 
     ai: [
-        { id: "a-1", name: "Alan Turing", designation: "Lead AI Scientist", image: "13.png" },
-        { id: "a-2", name: "Ada Lovelace", designation: "ML Engineer", image: "14.png" },
-        { id: "a-3", name: "Grace Hopper", designation: "Data Scientist", image: "15.png" },
-        { id: "a-4", name: "Marvin Minsky", designation: "NLP Specialist", image: "20.png" }
+        { id: "a-1", name: "Ashutosh Gawande", designation: "AI ENGINEER", image: "/images/team/devops/14.png" },
+        { id: "a-2", name: "Bhushan Chaware", designation: "AI ENGINEER", image: "/images/team/devops/13.png" },
+        { id: "a-3", name: "Vaishnavi Lalge", designation: "AI ENGINEER", image: "/images/team/ai/15.png" },
+        { id: "a-4", name: "Deepak Shinde", designation: "AI ENGINEER", image: "/images/team/mobile/16.png" },
+        { id: "a-5", name: "Khushi Pawar", designation: "AI ENGINEER", image: "/images/team/ai/20.png" },
     ],
 
     uiux: [
-        { id: "u-1", name: "Zaha Hadid", designation: "Head of Design", image: "18.png" },
-        { id: "u-2", name: "Frank Lloyd", designation: "Senior Product Designer", image: "24.png" },
-        { id: "u-3", name: "Le Corbusier", designation: "UX Researcher", image: "31.png" },
-        { id: "u-4", name: "Norman Foster", designation: "Visual Designer", image: "35.png" }
+        { id: "u-1", name: "Janhavi Deshmukh", designation: "UI/UX DESIGNER", image: "/images/team/uiux/18.png" },
+        { id: "u-2", name: "Mansi Kadam", designation: "UI/UX DESIGNER", image: "/images/team/uiux/24.png" }
     ]
 };
