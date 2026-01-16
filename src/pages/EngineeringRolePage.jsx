@@ -80,7 +80,7 @@ const EngineeringRolePage = () => {
                             {/* Clean Enterprise Hero Card */}
                             <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-blue-900/10 bg-gray-100 aspect-[16/9] ring-1 ring-black/5">
                                 <img
-                                    src={roleDetails.heroImage}
+                                    src={roleId === 'devops-engineers' ? "/images/devops.jpg" : roleDetails.heroImage}
                                     alt={`${roleDetails.title} Team`}
                                     className="w-full h-full object-cover object-center transform transition-transform duration-1000 hover:scale-105"
                                 />
