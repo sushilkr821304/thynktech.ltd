@@ -190,15 +190,16 @@ const EngineeringRolePage = () => {
                         </p>
                     </div>
 
-                    <div className="relative group/marquee">
+                    <div className="relative group/marquee overflow-hidden">
                         {currentTeam.length > 0 ? (
-                            <div className="flex animate-team-scroll w-max gap-5 group-hover/marquee:[animation-play-state:paused]">
-                                {[...currentTeam, ...currentTeam, ...currentTeam, ...currentTeam].map((member, idx) => (
+                            <div className={`flex gap-6 ${currentTeam.length > 4 ? 'animate-team-scroll w-max' : 'justify-center w-full'}`}>
+                                {/* Only duplicate array if we have enough members for a continuous marquee */}
+                                {(currentTeam.length > 4 ? [...currentTeam, ...currentTeam, ...currentTeam, ...currentTeam] : currentTeam).map((member, idx) => (
                                     <div
                                         key={`${member.id}-${idx}`}
-                                        className="w-52 flex-shrink-0 bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-[#E6EAF0] transition-all duration-300 hover:shadow-[0_15px_35px_rgba(10,37,64,0.08)]"
+                                        className="w-56 flex-shrink-0 bg-white rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)] border border-[#E6ECF5] transition-all duration-500 hover:shadow-[0_25px_50px_rgba(11,27,58,0.1)] group/card"
                                     >
-                                        <div className="h-[260px] w-full overflow-hidden relative bg-[#BFC6D2] flex items-center justify-center p-0">
+                                        <div className="h-[280px] w-full overflow-hidden relative bg-[#BFC6D2] flex items-center justify-center p-0">
                                             <img
                                                 src={member.image}
                                                 alt={member.name}
@@ -207,19 +208,20 @@ const EngineeringRolePage = () => {
                                                 onError={(e) => {
                                                     e.target.src = "/images/team/default.png";
                                                 }}
-                                                className="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105"
+                                                className="w-full h-full object-cover object-center transition-all duration-700 group-hover/card:scale-110"
                                                 style={{ mixBlendMode: 'multiply', opacity: '1' }}
                                             />
+                                            <div className="absolute inset-0 bg-[#0B1B3A]/10 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
                                         </div>
-                                        <div className="p-4 text-center">
-                                            <h3 className="font-bold text-[#0A2540] text-base mb-1 leading-tight tracking-tight">{member.name}</h3>
-                                            <p className="text-[#2563EB] font-semibold text-[9px] uppercase tracking-widest">{member.designation}</p>
+                                        <div className="p-6 text-center bg-white border-t border-[#E6ECF5]">
+                                            <h3 className="font-bold text-[#0B1B3A] text-lg mb-1 leading-tight tracking-tight group-hover/card:text-[#2563EB] transition-colors">{member.name}</h3>
+                                            <p className="text-[#2563EB] font-bold text-[10px] uppercase tracking-[0.15em] opacity-80">{member.designation}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         ) : (
-                            <div className="text-center py-12 text-gray-400 bg-white/50 rounded-2xl border border-dashed border-gray-200">
+                            <div className="text-center py-20 text-[#5B6B82] bg-[#F6F8FC] rounded-3xl border border-dashed border-[#E6ECF5] font-medium">
                                 No team members listed for this department yet.
                             </div>
                         )}

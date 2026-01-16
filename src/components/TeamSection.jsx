@@ -4,21 +4,18 @@ const teamMembers = [
         name: 'Rasika Sonawane',
         role: 'Human Resources Manager',
         image: '/images/team1.jpg',
-        linkedin: 'https://www.linkedin.com/in/rasika-s-6a0815217',
         email: 'hr@thynktech.ltd'
     },
     {
         name: 'Hrushikesh Kakulte',
         role: 'Operations Manager',
         image: '/images/team2.jpg',
-        linkedin: 'https://www.linkedin.com/in/hrushikesh-kakulte-625122210/',
         email: 'operation@thynktech.ltd'
     },
     {
         name: 'Dhruvil Parekh',
         role: 'Training and Development Head',
         image: '/images/team3.JPG',
-        linkedin: 'https://www.linkedin.com/in/dhruvil-parekh-52494232b',
         email: 'recruiter@thynktech.ltd'
     },
     {
@@ -32,7 +29,6 @@ const teamMembers = [
         name: 'Chandra Mohan Rao',
         role: 'Sales Manager',
         image: '/images/mohan.png',
-        linkedin: 'https://www.linkedin.com/in/chandra-mohan-rao-8085b9288',
         email: 'campus@thynktech.ltd'
     }
 ];
