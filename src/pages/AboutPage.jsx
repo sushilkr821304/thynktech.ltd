@@ -61,7 +61,7 @@ const AboutPage = () => {
     return (
         <div className="font-sans text-gray-900 antialiased">
             <Navbar />
-            <div className="pt-20 min-h-screen bg-gray-50">
+            <div className="pt-16 min-h-screen bg-gray-50">
                 {/* We render ALL sections in order as requested */}
                 <div id="company">
                     <AboutSection />

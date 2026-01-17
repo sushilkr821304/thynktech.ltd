@@ -1,11 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Lightbulb, Users, Target, Rocket, Award, Heart, Zap, Coffee, Code, Laugh, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Target, Heart, Zap, Coffee, Award, Laugh, ChevronLeft, ChevronRight } from 'lucide-react';
 import heroImage from '../assets/life_hero.png';
 import cultureCollaboration from '../assets/culture_collaboration.png';
 import cultureMeeting from '../assets/culture_meeting.png';
 import cultureCoding from '../assets/culture_coding.png';
+
+const galleryImages = [
+    { src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200", title: "Team Collaboration" },
+    { src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=1200", title: "Office Life" },
+    { src: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200", title: "Innovation & Creativity" },
+    { src: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1200", title: "Agile Development" },
+    { src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200", title: "Problem Solving" },
+    { src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200", title: "Code Review & Engineering" },
+    { src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200", title: "Leadership & Mentorship" },
+    { src: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200", title: "Work-Life Balance" },
+    { src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200", title: "Learning & Skill Growth" },
+    { src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200", title: "Client Communication" }
+];
 
 const LifeAtThynkTech = () => {
     useEffect(() => {
@@ -33,45 +46,31 @@ const LifeAtThynkTech = () => {
         }
     ];
 
-    const events = [
-        { title: "Annual Hackathon 2024", date: "Oct 15", category: "Innovation" },
-        { title: "Diwali Automation Gala", date: "Nov 01", category: "Celebration" },
-        { title: "Tech Talk: Future of AI", date: "Dec 10", category: "Knowledge" },
-        { title: "Product Launch: ThynkChat", date: "Jan 05", category: "Milestone" },
-    ];
-
     const [currentSlide, setCurrentSlide] = useState(0);
-    const galleryImages = [
-        { src: cultureCollaboration, alt: "Team Collaboration" },
-        { src: cultureMeeting, alt: "Office Life" },
-        { src: cultureCoding, alt: "Hackathon Winners" },
-        { src: heroImage, alt: "Campus Tour" },
-        { src: cultureCollaboration, alt: "Mentorship Session" }
-    ];
-
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % (galleryImages.length));
-    };
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % (galleryImages.length));
-    };
-
-    // Responsive visible cards configuration
-    const getVisibleCards = () => {
-        if (typeof window !== 'undefined') {
-            if (window.innerWidth < 768) return 1;
-            if (window.innerWidth < 1024) return 2;
-            return 3;
-        }
-        return 3;
-    };
-
-    // Simple window resize listener for responsiveness (optional but good for carousel)
     const [visibleCards, setVisibleCards] = useState(3);
+
+    const nextSlide = useCallback(() => {
+        setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
+    }, []);
+
+    const prevSlide = useCallback(() => {
+        setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+    }, []);
+
     useEffect(() => {
-        const handleResize = () => setVisibleCards(getVisibleCards());
-        handleResize(); // Initial call
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 3000);
+        return () => clearInterval(interval);
+    }, [nextSlide]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 768) setVisibleCards(1);
+            else if (window.innerWidth < 1024) setVisibleCards(2);
+            else setVisibleCards(3);
+        };
+        handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -235,7 +234,6 @@ const LifeAtThynkTech = () => {
                         </p>
                     </div>
 
-                    {/* Events Gallery Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:h-[500px]">
                         <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-2xl min-h-[300px] md:min-h-0">
                             <img src={cultureCoding} alt="Hackathon" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -255,7 +253,6 @@ const LifeAtThynkTech = () => {
                             <p className="text-sm text-blue-100 mt-2">Gaming, food, and bonding.</p>
                         </div>
                         <div className="md:col-span-2 relative group overflow-hidden rounded-2xl bg-gray-200 min-h-[200px] md:min-h-0">
-                            {/* Placeholder for Event Image */}
                             <div className="w-full h-full bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
                                 <div className="text-center text-white p-6">
                                     <Award size={40} className="mx-auto mb-2" />
@@ -267,74 +264,91 @@ const LifeAtThynkTech = () => {
                 </div>
             </section>
 
-            {/* NEW: Life at ThynkTech India Gallery Overlay */}
-            <section className="py-24 bg-white border-t border-gray-100">
-                <div className="container mx-auto px-6">
-                    <div className="mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#002B5C] mb-4">Life at ThynkTech India: Growing Together Every Day</h2>
-                        <p className="text-gray-600 max-w-4xl text-lg leading-relaxed">
+            {/* Life at ThynkTech India Carousel Section */}
+            <section className="py-20 md:py-24 bg-white border-t border-gray-100 overflow-hidden" id="culture-slider">
+                <div className="container mx-auto px-6 md:px-12">
+                    <div className="mb-10 md:mb-16">
+                        <h2 className="text-3xl md:text-5xl font-bold text-[#002B5C] mb-6 leading-tight">Life at ThynkTech India: Growing Together Every Day</h2>
+                        <p className="text-gray-600 max-w-4xl text-base md:text-xl leading-relaxed">
                             Step into a world of innovation and transformation. See how ThynkTech employees are reinventing their careers, the workplace, and the technology landscape. Explore our moments to glimpse the exciting and dynamic culture at ThynkTech.
                         </p>
                     </div>
 
-                    <div className="relative group">
-                        {/* Navigation Buttons */}
-                        <button
-                            onClick={prevSlide}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-12 z-20 bg-white/90 backdrop-blur text-[#002B5C] p-2 md:p-3 rounded-full shadow-lg border border-gray-100 hover:bg-[#002B5C] hover:text-white transition-all duration-300"
-                            aria-label="Previous Slide"
-                        >
-                            <ChevronLeft size={20} className="md:w-6 md:h-6" />
-                        </button>
-                        <button
-                            onClick={nextSlide}
-                            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-12 z-20 bg-white/90 backdrop-blur text-[#002B5C] p-2 md:p-3 rounded-full shadow-lg border border-gray-100 hover:bg-[#002B5C] hover:text-white transition-all duration-300"
-                            aria-label="Next Slide"
-                        >
-                            <ChevronRight size={20} className="md:w-6 md:h-6" />
-                        </button>
+                    <div className="relative">
+                        {/* Navigation Buttons - Perfectly Centers relative to card area */}
+                        <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between z-30 pointer-events-none -mx-2 md:-mx-8">
+                            <button
+                                onClick={prevSlide}
+                                className="pointer-events-auto ml-1 md:ml-0 bg-white/95 backdrop-blur-md text-[#002B5C] p-2.5 md:p-4 rounded-full shadow-xl border border-gray-200 hover:bg-[#002B5C] hover:text-white transition-all duration-300 transform active:scale-90"
+                                aria-label="Previous Slide"
+                            >
+                                <ChevronLeft size={20} className="md:w-6 md:h-6" />
+                            </button>
+                            <button
+                                onClick={nextSlide}
+                                className="pointer-events-auto mr-1 md:mr-0 bg-white/95 backdrop-blur-md text-[#002B5C] p-2.5 md:p-4 rounded-full shadow-xl border border-gray-200 hover:bg-[#002B5C] hover:text-white transition-all duration-300 transform active:scale-90"
+                                aria-label="Next Slide"
+                            >
+                                <ChevronRight size={20} className="md:w-6 md:h-6" />
+                            </button>
+                        </div>
 
-                        {/* Carousel Track */}
-                        <div className="overflow-hidden py-4 -mx-4 px-4">
+                        {/* Carousel Track - Centered 1-card layout for mobile */}
+                        <div className="overflow-hidden py-4">
                             <div
-                                className="flex transition-transform duration-500 ease-in-out gap-6"
-                                style={{ transform: `translateX(-${currentSlide * (100 / visibleCards)}%)` }}
+                                className="flex transition-transform duration-700 cubic-bezier(0.4, 0, 0.2, 1)"
+                                style={{
+                                    transform: `translateX(-${currentSlide * (100 / visibleCards)}%)`,
+                                    gap: visibleCards === 1 ? '0' : (window.innerWidth < 1024 ? '16px' : '24px')
+                                }}
                             >
                                 {galleryImages.map((img, idx) => (
                                     <div
                                         key={idx}
-                                        className="flex-shrink-0 relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 group/card"
-                                        style={{ width: `calc(${100 / visibleCards}% - ${(24 * (visibleCards - 1)) / visibleCards}px)` }}
+                                        className="flex-shrink-0 relative overflow-hidden rounded-3xl shadow-2xl transition-all duration-500 group/card bg-gray-50"
+                                        style={{
+                                            width: visibleCards === 1
+                                                ? '100%'
+                                                : `calc(${100 / visibleCards}% - ${((visibleCards > 1 ? (window.innerWidth < 1024 ? 16 : 24) : 0) * (visibleCards - 1)) / visibleCards}px)`
+                                        }}
                                     >
-                                        <div className="aspect-[4/3] overflow-hidden">
+                                        <div className="aspect-[14/10] md:aspect-[4/3] overflow-hidden">
                                             <img
                                                 src={img.src}
-                                                alt={img.alt}
-                                                className="w-full h-full object-cover transform group-hover/card:scale-105 transition-transform duration-700"
+                                                alt={img.title}
+                                                className="w-full h-full object-cover transform group-hover/card:scale-110 transition-transform duration-1000"
                                             />
                                         </div>
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#002B5C]/80 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                                            <span className="text-white font-semibold text-lg">{img.alt}</span>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex items-end p-5 md:p-8 opacity-90 group-hover/card:opacity-100 transition-opacity">
+                                            <div className="bg-white/10 backdrop-blur-xl px-4 py-2 md:px-6 md:py-3 rounded-2xl border border-white/20 shadow-2xl">
+                                                <span className="text-white font-bold text-sm md:text-xl block tracking-wide">
+                                                    {img.title}
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
-                                {/* Duplicates for infinite scroll illusion if we wanted, but simple sliding window is fine for now. 
-                                    Just repeating list to layout correctly if index goes high? 
-                                    The logic above is simple index shifting. To allow scrolling to "end" properly with visible window, 
-                                    we need to constrain the max index or wrap around. 
-                                    Current logic wraps around which is fine but might show empty space if not handled.
-                                    Actually, standard "wrap" logic often jumps. 
-                                    For a simple robust solution without libraries, I will just clamp the index.
-                                    Or simpler: Just render enough items. 
-                                    Let's Update the map to repeat the items to ensure we always have content or just limit the nextSlide logic.
-                                */}
                             </div>
                         </div>
+                    </div>
+
+                    {/* Dots Indicator - Centered */}
+                    <div className="flex justify-center gap-3 mt-8 md:mt-12">
+                        {galleryImages.map((_, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => setCurrentSlide(idx)}
+                                className={`h-2 rounded-full transition-all duration-500 ${currentSlide === idx
+                                        ? 'w-10 bg-[#002B5C] shadow-md'
+                                        : 'w-2 bg-gray-300 hover:bg-gray-400'
+                                    }`}
+                                aria-label={`Go to slide ${idx + 1}`}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>
 
-            {/* Footer which includes GlobalCTA automatically */}
             <Footer />
         </div>
     );

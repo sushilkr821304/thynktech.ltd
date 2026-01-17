@@ -77,7 +77,7 @@ export const products = [
         slug: "urbanride",
         image: "/images/urbanride.png",
         description: "UrbanRide offers reliable home-to-destination cab service across all of India. Experience comfortable, safe, and affordable rides with professional drivers, real-time tracking, and 24/7 availability for all your transportation needs.",
-        link: "#",
+        link: "https://urbanride.ltd/",
         isLive: true
     },
     {
