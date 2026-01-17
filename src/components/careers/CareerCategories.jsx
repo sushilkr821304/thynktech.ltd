@@ -39,8 +39,8 @@ const CareerCategories = () => {
                         type="fresher"
                     />
                     <CategoryCard
-                        title="Experienced Professionals"
-                        image={professionalImg}
+                        title="Experienced Tech Professionals"
+                        image="/images/team-laptop.jpg"
                         type="experienced"
                     />
                 </div>

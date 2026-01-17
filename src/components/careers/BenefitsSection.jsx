@@ -1,7 +1,4 @@
 import React from 'react';
-import benefitImg from '../../assets/culture_innovation.png';
-import collabImg from '../../assets/culture_collaboration.png';
-import codingImg from '../../assets/culture_coding.png';
 
 const BenefitsSection = () => {
     return (
@@ -50,30 +47,14 @@ const BenefitsSection = () => {
                         </div>
                     </div>
 
-                    <div className="lg:w-1/2 w-full">
-                        <div className="grid grid-cols-2 gap-4 h-[500px]">
-                            <div className="col-span-2 h-[300px] overflow-hidden rounded-2xl shadow-lg relative group">
-                                <img
-                                    src={benefitImg}
-                                    alt="Innovation"
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            </div>
-                            <div className="h-[180px] overflow-hidden rounded-2xl shadow-lg relative group">
-                                <img
-                                    src={collabImg}
-                                    alt="Collaboration"
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                />
-                            </div>
-                            <div className="h-[180px] overflow-hidden rounded-2xl shadow-lg relative group">
-                                <img
-                                    src={codingImg}
-                                    alt="Coding"
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                                />
-                            </div>
+                    <div className="lg:w-1/2 w-full h-[400px] lg:h-[500px]">
+                        <div className="w-full h-full overflow-hidden rounded-2xl shadow-xl border border-gray-100 relative group">
+                            <img
+                                src="/images/office-team.jpg"
+                                alt="ThynkTech Office Team"
+                                className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
                         </div>
                     </div>
                 </div>

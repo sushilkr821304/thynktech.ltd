@@ -59,27 +59,29 @@ const CultureSection = () => {
                 <div className="flex-1 group cursor-pointer overflow-hidden border-r border-gray-100">
                     <div className="relative aspect-[16/8] overflow-hidden bg-gray-50">
                         <img
-                            src={getSafeImage('grid1', "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop")}
+                            src={getSafeImage('grid1', "/images/office-working.jpg")}
                             alt="Early Careers in Tech"
                             onError={() => handleImageError('grid1')}
                             className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                         />
+                        <div className="absolute inset-0 bg-black/10 transition-opacity group-hover:opacity-20"></div>
                     </div>
                     <div className="p-8 md:p-10 bg-white">
-                        <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight group-hover:text-secondary transition-colors uppercase">Early Careers</h3>
+                        <h3 className="text-2xl md:text-3xl font-black text-[#3498DB] tracking-tight group-hover:text-[#2980b9] transition-colors uppercase">Early Careers</h3>
                     </div>
                 </div>
                 <div className="flex-1 group cursor-pointer overflow-hidden">
                     <div className="relative aspect-[16/8] overflow-hidden bg-gray-50">
                         <img
-                            src={getSafeImage('grid2', "https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2070&auto=format&fit=crop")}
+                            src={getSafeImage('grid2', "/images/team-discussion.jpg")}
                             alt="Experienced Tech Professionals"
                             onError={() => handleImageError('grid2')}
                             className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                         />
+                        <div className="absolute inset-0 bg-black/10 transition-opacity group-hover:opacity-20"></div>
                     </div>
                     <div className="p-8 md:p-10 bg-white">
-                        <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight group-hover:text-secondary transition-colors uppercase">Experienced Professionals</h3>
+                        <h3 className="text-2xl md:text-3xl font-black text-[#0A2540] tracking-tight group-hover:text-blue-900 transition-colors uppercase">Experienced Professionals</h3>
                     </div>
                 </div>
             </div>
