@@ -167,7 +167,7 @@ const WhyThynkTech = () => {
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-4">
                                     <img
-                                        src={cultureCollaboration}
+                                        src="/images/office-desks.jpg"
                                         alt="Team Collaboration"
                                         className="h-48 w-full object-cover rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
                                     />
@@ -179,12 +179,12 @@ const WhyThynkTech = () => {
                                 </div>
                                 <div className="space-y-4 pt-12">
                                     <img
-                                        src={cultureMeeting}
+                                        src="/images/team-discussion-laptop.jpg"
                                         alt="Inclusive Culture"
                                         className="h-64 w-full object-cover rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
                                     />
                                     <img
-                                        src={cultureInnovation}
+                                        src="/images/team-white-table.jpg"
                                         alt="Innovation Hub"
                                         className="h-48 w-full object-cover rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.02]"
                                     />
