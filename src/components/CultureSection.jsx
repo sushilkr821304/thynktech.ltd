@@ -19,22 +19,22 @@ const CultureSection = () => {
         {
             title: "Tech-First Benefits",
             description: "At ThynkTech India, we empower our engineers with high-end hardware, remote-first flexibility, and continuous learning stipends. We believe in providing a workspace—both physical and digital—that removes friction and fosters deep work.",
-            image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
+            image: "/images/office6.jpg",
         },
         {
             title: "Inclusive Engineering Culture",
             description: "Diversity is our greatest strength in solving complex technical challenges. At ThynkTech India, inclusion means every voice—from interns to senior architects—is heard during sprint planning and architecture reviews.",
-            image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop"
+            image: "/images/tester12.jpeg",
         },
         {
             title: "Life at ThynkTech",
             description: "Step into a high-energy environment defined by brainstorming at whiteboards, collaborative code reviews, and the occasional celebratory hackathon. Our culture is built on transparency, technical autonomy, and scaling systems.",
-            image: "https://images.unsplash.com/photo-1522071823991-b518ee2f339f?q=80&w=2070&auto=format&fit=crop"
+            image: "/images/office-team.jpg",
         },
         {
             title: "Engineering with Purpose",
             description: "Our mission is to build digital products that fundamentally improve how businesses operate. We solve real-world problems through engineering excellence, data-driven decisions, and a commitment to building a better digital future.",
-            image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop"
+            image: "/images/office3.JPG",
         }
     ];
 
