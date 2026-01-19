@@ -78,24 +78,25 @@ const EngineeringRolePage = () => {
                             <div className="absolute -top-12 -right-12 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
 
                             {/* Clean Enterprise Hero Card */}
-                            <div className="relative rounded-xl overflow-hidden shadow-2xl shadow-blue-900/10 bg-gray-100 aspect-[16/9] ring-1 ring-black/5">
+                            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/20 bg-gray-100 aspect-[16/9] ring-1 ring-black/5">
                                 <img
                                     src={roleId === 'devops-engineers' ? "/images/devops.jpg" : roleDetails.heroImage}
                                     alt={`${roleDetails.title} Team`}
                                     className="w-full h-full object-cover object-center transform transition-transform duration-1000 hover:scale-105"
                                 />
 
-                                {/* Professional Bottom Gradient */}
-                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#0A2540] to-transparent opacity-90"></div>
+                                {/* Professional Overlays for Readability */}
+                                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#0A2540]/90 via-[#0A2540]/40 to-transparent"></div>
+                                <div className="absolute inset-0 bg-[#0A2540]/5"></div>
 
                                 {/* Minimal Caption */}
-                                <div className="absolute bottom-8 left-8 right-8 text-white">
+                                <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 text-white">
                                     <div className="flex items-center gap-3 mb-3">
                                         <div className="h-0.5 w-8 bg-blue-400"></div>
-                                        <span className="text-xs font-bold tracking-widest uppercase text-blue-200">Team Excellence</span>
+                                        <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-blue-200">Team Excellence</span>
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-1 tracking-tight">Innovating with Precision</h3>
-                                    <p className="text-blue-100 text-sm font-light opacity-90">Building the future of {roleDetails.title.replace('Engineering', '')}</p>
+                                    <h3 className="text-xl md:text-3xl font-bold mb-1 tracking-tight">Innovating with Precision</h3>
+                                    <p className="text-blue-100 text-xs md:text-base font-light opacity-95">Building the future of {roleDetails.title.replace('Engineering', '')}</p>
                                 </div>
                             </div>
                         </div>

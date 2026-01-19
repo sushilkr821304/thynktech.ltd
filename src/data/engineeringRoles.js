@@ -58,7 +58,7 @@ export const engineeringRoles = {
     "fullstack-developers": {
         title: "Full-Stack Engineering",
         subtitle: "Delivering end-to-end digital solutions with mastery across the entire technology stack.",
-        heroImage: "/images/fullstack/hero.jpg",
+        heroImage: "/images/fullstack/team-group.jpg",
         description: "Our Full-Stack engineers are the versatile problem solvers of ThynkTech. Capable of navigating the entire development lifecycle, they bridge the gap between client-side interactions and server-side logic to deliver cohesive, feature-rich products.",
         techStack: [
             { name: "MERN Stack", icon: "🌐", desc: "MongoDB, Express, React, Node" },
@@ -85,7 +85,7 @@ export const engineeringRoles = {
     "app-developers": {
         title: "Mobile App Engineering",
         subtitle: "Creating native and cross-platform mobile experiences that users love on iOS and Android.",
-        heroImage: "/images/mobile/hero.jpg",
+        heroImage: "/images/mobile/team-group.jpg",
         description: "We build mobile applications that define brands. Whether detailed native performance or rapid cross-platform deployment, our mobile engineering team delivers fluid, crash-free, and engaging mobile experiences.",
         techStack: [
             { name: "React Native", icon: "⚛️", desc: "Cross-platform efficiency" },
@@ -139,7 +139,7 @@ export const engineeringRoles = {
     "qa-engineers": {
         title: "QA & Automation",
         subtitle: "Ensuring flawless quality through rigorous testing, automation, and performance analysis.",
-        heroImage: "/images/qa/hero.jpg",
+        heroImage: "/images/qa/team-group.jpg",
         description: "Quality is not an afterthought; it is our culture. Our QA engineers utilize advanced automation frameworks to catch bugs before they ever reach production, ensuring your user's trust is never compromised.",
         techStack: [
             { name: "Selenium", icon: "🤖", desc: "Web browser automation" },
@@ -166,7 +166,7 @@ export const engineeringRoles = {
     "ai-developers": {
         title: "AI & Machine Learning",
         subtitle: "Transforming raw data into intelligent insights and automated decision-making systems.",
-        heroImage: "/images/ai/hero.jpg",
+        heroImage: "/images/ai/team-group.jpg",
         description: "Our AI/ML researchers and engineers build intelligent systems that learn and adapt. From Natural Language Processing to Computer Vision, we help businesses unlock the hidden value in their data.",
         techStack: [
             { name: "Python", icon: "🐍", desc: "Primary AI language" },
@@ -193,7 +193,7 @@ export const engineeringRoles = {
     "ui-ux-designers": {
         title: "UI / UX Design",
         subtitle: "Crafting intuitive, human-centered digital experiences that delight users and drive engagement.",
-        heroImage: "/images/uiux/hero.jpg",
+        heroImage: "/images/uiux/team-group.jpg",
         description: "Design is how it works. Our UI/UX team combines empathy, research, and creativity to design products that solve real problems. We believe in aesthetics that serve function.",
         techStack: [
             { name: "Figma", icon: "🎨", desc: "Interface design & prototyping" },
