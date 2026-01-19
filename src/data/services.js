@@ -24,7 +24,7 @@ export const servicesData = [
         ],
         features: ["Responsive web design", "UI/UX focused layouts", "Performance-optimized", "Scalable solutions", "SEO Friendly"],
         videoPath: "/images/web.mp4",
-        teamImagePath: "/images/group.jpeg",
+        teamImagePath: "/images/web-dev-team.jpg",
         mainContent: {
             heading: "Creativity and user-friendliness innovations",
             text: "ThynkTech India is a leading Web design and development company, offering a wide range of services including enterprise web apps, WordPress solutions, and headless CMS integrations. We design experiences that hook and convert!"
@@ -89,7 +89,7 @@ export const servicesData = [
         description: "Generic software often falls short of meeting unique business needs. ThynkTech India develops bespoke software solutions—from ERPs to SaaS products—that align with your specific workflows.",
         heroImage: "/images/what-we-do/engineering.png",
         videoPath: "/images/sdlc.mp4",
-        teamImagePath: "/images/group.jpeg",
+        teamImagePath: "/images/web-dev-team.jpg",
         aboutSection: {
             heading: "Tailored Architecture. Enterprise Scale.",
             textLeft: "Modern business requires more than just tools—it requires an integrated digital ecosystem. We build the software that acts as the backbone of your organizational efficiency.",
@@ -139,7 +139,7 @@ export const servicesData = [
         description: "Software quality is the foundation of user trust. We implement advanced automation testing frameworks to ensure your products are bug-free, secure, and ready for high-load environments.",
         heroImage: "/images/what-we-do/analytics.png",
         videoPath: "/images/testing.mp4",
-        teamImagePath: "/images/group.jpeg",
+        teamImagePath: "/images/tester12.jpeg",
         aboutSection: {
             heading: "Confidence in Every Code Release.",
             textLeft: "Manual testing can't keep up with the speed of modern development. Automation is the only way to ensure quality without sacrificing speed. We provide that bridge.",

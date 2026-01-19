@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Target, Heart, Zap, Coffee, Award, Laugh, ChevronLeft, ChevronRight } from 'lucide-react';
-import heroImage from '../assets/life_hero.png';
+import heroImage from '../assets/life_hero_office.jpg';
 import cultureCollaboration from '../assets/culture_collaboration.png';
 import cultureMeeting from '../assets/culture_meeting.png';
 import cultureCoding from '../assets/culture_coding.png';
@@ -80,7 +80,7 @@ const LifeAtThynkTech = () => {
             <Navbar />
 
             {/* Hero Section */}
-            <section className="relative min-h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden py-20 md:py-0">
+            <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
                         src={heroImage}
@@ -339,8 +339,8 @@ const LifeAtThynkTech = () => {
                                 key={idx}
                                 onClick={() => setCurrentSlide(idx)}
                                 className={`h-2 rounded-full transition-all duration-500 ${currentSlide === idx
-                                        ? 'w-10 bg-[#002B5C] shadow-md'
-                                        : 'w-2 bg-gray-300 hover:bg-gray-400'
+                                    ? 'w-10 bg-[#002B5C] shadow-md'
+                                    : 'w-2 bg-gray-300 hover:bg-gray-400'
                                     }`}
                                 aria-label={`Go to slide ${idx + 1}`}
                             />

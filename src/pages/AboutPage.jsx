@@ -7,7 +7,7 @@ import TeamSection from '../components/TeamSection';
 import CareersSection from '../components/CareersSection';
 import FounderSection from '../components/FounderSection';
 import EngineersSection from '../components/EngineersSection';
-import SalesSection from '../components/SalesSection';
+import WhyThynkTechSection from '../components/WhyThynkTechSection';
 
 const AboutPage = () => {
     // The previous dynamic routing is replaced by a single comprehensive page as requested below 'About Page' requirement
@@ -76,7 +76,7 @@ const AboutPage = () => {
                     <EngineersSection />
                 </div>
                 <div id="sales">
-                    <SalesSection />
+                    <WhyThynkTechSection />
                 </div>
             </div>
             <Footer />
